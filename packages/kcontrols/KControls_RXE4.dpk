@@ -1,0 +1,49 @@
+package KControls_RXE4;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS ON}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE USE_THEMES}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'KControls Development Suite - runtime package'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  vclx,
+  vclimg;
+
+contains
+  kcontrols in '..\..\source\kcontrols.pas',
+  keditcommon in '..\..\source\keditcommon.pas',
+  kfunctions in '..\..\source\kfunctions.pas',
+  kgraphics in '..\..\source\kgraphics.pas',
+  khexeditor in '..\..\source\khexeditor.pas',
+  kmemo in '..\..\source\kmemo.pas',
+  kmemortf in '..\..\source\kmemortf.pas',
+  kres in '..\..\source\kres.pas',
+  kedits in '..\..\source\kedits.pas';
+
+end.
