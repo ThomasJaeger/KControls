@@ -1092,6 +1092,8 @@ type
     property OnDropFiles: TKEditDropFilesEvent read FOnDropFiles write FOnDropFiles;
     { When assigned, this event will be invoked at each prompt-forced search match }
     property OnReplaceText: TKEditReplaceTextEvent read FOnReplaceText write FOnReplaceText;
+
+    function GetSize: int64;
   end;
 
   { @abstract(Hexadecimal editor design-time component) }
@@ -5035,6 +5037,11 @@ procedure TKCustomHexEditor.WMVScroll(var Msg: TLMVScroll);
 begin
   SafeSetFocus;
   ModifyScrollBar(SB_VERT, Msg.ScrollCode, Msg.Pos, True);
+end;
+
+function TKCustomHexEditor.GetSize: int64;
+begin
+  result := FSize;
 end;
 
 end.
